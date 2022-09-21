@@ -1,0 +1,79 @@
+.container {
+    border: 2px solid black;
+    border-radius: 4px;
+    max-width: 450px;
+    padding: 20px;
+}
+
+h2 {
+    margin-top: 14px;
+}
+
+.inputForm {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.label {
+    margin-bottom: 10px;
+}
+
+.input {
+    width: 240px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.inputForm__button {
+    border-color: transparent;
+    background-color:rgb(238, 237, 237);
+    transition: background-color 500ms linear, color 500ms linear;
+    cursor: pointer;
+}
+
+.inputForm__button:hover,
+.inputForm__button:focus {
+    background-color: grey !important;
+    color: white !important;
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.form {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.contacts {
+    margin-top: 40px;
+}
+
+.contactlist {
+    margin-bottom: 10px;
+    padding-left: 4px;
+}
+
+.contactlist__button {
+    background-color:rgb(238, 237, 237);
+    transition: background-color 500ms linear, color 500ms linear;
+    cursor: pointer;
+    border: 1px solid rgb(238, 237, 237);
+    padding: 2px 4px;
+    margin-left: 4px;
+}
+
+.contactlist__button:hover,
+.contactlist__button:focus {
+    background-color: grey !important;
+    color: white !important;
+}
