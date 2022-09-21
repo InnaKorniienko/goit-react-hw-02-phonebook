@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PhonebookAdd from "./PhonebookAdd";
 import Contactlist from "./Contactlist";
+import Filter from "./Filter";
 import { nanoid } from "nanoid";
 import Notiflix from "notiflix";
 import css from "./Phonebook.module.css";
@@ -40,12 +41,9 @@ removeContact = (id) => {
     })
 }
 
-handleChange = (e) => {
-    const { name, value } = e.target;
-    this.setState({
-    [name]: value
-    })
-}
+changeFilter = (filter) => {
+    this.setState({ filter });
+  };
 
 isDublicate({name, number}) {
     const { contacts } = this.state;
@@ -71,7 +69,7 @@ getFilteredContacts() {
 }
 
     render() {
-        const { addContact, removeContact, handleChange } = this;
+        const { addContact, removeContact, changeFilter } = this;
         const { filter } = this.state;
         const contacts = this.getFilteredContacts();
         return (
@@ -82,10 +80,7 @@ getFilteredContacts() {
             </div>
             <div className={css.contacts}>
                 <h2>Contacts</h2>
-                <div className={css.filter}>
-                <label className={css.label} > Find contacts by name </label>
-                <input className={css.input} type="text" name="filter" onChange={handleChange} value={filter}/>
-                </div>
+                <Filter value={filter} onChangeFilter={changeFilter} />
                 <Contactlist items={contacts} removeContact={removeContact}/>
             </div>
             </div>

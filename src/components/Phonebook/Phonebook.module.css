@@ -28,6 +28,7 @@ h2 {
 }
 
 .inputForm__button {
+    font-size: 12px;
     border-color: transparent;
     background-color:rgb(238, 237, 237);
     transition: background-color 500ms linear, color 500ms linear;
@@ -65,11 +66,13 @@ h2 {
 
 .contactlist__button {
     background-color:rgb(238, 237, 237);
+    border: 1px solid rgb(238, 237, 237);
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-left: 4px;
+    font-size: 12px;
     transition: background-color 500ms linear, color 500ms linear;
     cursor: pointer;
-    border: 1px solid rgb(238, 237, 237);
-    padding: 2px 4px;
-    margin-left: 4px;
 }
 
 .contactlist__button:hover,
