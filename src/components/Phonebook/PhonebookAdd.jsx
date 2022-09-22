@@ -73,8 +73,5 @@ handleSubmit = (e) => {
 
 
 PhonebookAdd.propTypes = {
-    stay: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    number: PropTypes.string.isRequired,
-    })),
+    onSubmit: PropTypes.func.isRequired,
 }
